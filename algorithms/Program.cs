@@ -108,10 +108,18 @@ foreach (var item in arrToQuickSort) {
 
  */
 
-Structures.List<int> list = new(1);
-list.AddLast(2);
-list.AddLast(3);
-list.AddLast(4);
-list.AddLast(5);
-
+Structures.LinkedList<int, int> list = new(1, 10);
+list.AddLast(2, 20);
+list.AddLast(3, 30);
+list.AddLast(4, 40);
+list.AddLast(5, 50);
 list.PrintList();
+//Get Element by keys
+Console.WriteLine("Element by key: " + list.GetNode(3).ToString());
+Console.WriteLine("Element by key: " + list.GetNode(2).ToString());
+Console.WriteLine("Element by key: " + list.GetNode(5).ToString());
+Console.WriteLine("Element by key: " + list.GetNode(4).ToString());
+
+// list.AddAfterNode(2, 20, 8, 80);
+// list.DeleteNode(4);
+// list.PrintList();
