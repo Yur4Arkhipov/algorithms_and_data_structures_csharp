@@ -104,11 +104,35 @@ foreach (var item in arrToQuickSort) {
 
 /**
     STRUCTURES
+    (1)LinkedList
+        Methods:
+            1.AddLast()
+            2.GetNode()
+            3.AddAfterNode()
+            4.AddBeforeNode()
+            5.DeleteFirstNode()
+            6.DeleteLastNode()
+            7.DeleteNode()
+            8.PrintList()
+            9.Clear()
+            10.Count()
 
+    (2)Stack
+        Methods:
+            1.
+            2.
+            3.
+            4.
 
+    (3)Queue
+        Methods:
+            1.
+            2.
+            3.
+            4.
  */
 
-Structures.LinkedList<int, int> list = new(1, 10);
+/* Structures.LinkedList<int, int> list = new(1, 10);
 list.AddLast(2, 20);
 list.AddLast(3, 30);
 list.AddLast(4, 40);
@@ -119,7 +143,76 @@ Console.WriteLine("Element by key: " + list.GetNode(3).ToString());
 Console.WriteLine("Element by key: " + list.GetNode(2).ToString());
 Console.WriteLine("Element by key: " + list.GetNode(5).ToString());
 Console.WriteLine("Element by key: " + list.GetNode(4).ToString());
+Console.WriteLine("Add new item after some mode: ");
+list.AddAfterNode(2, 8, 80);
+list.AddAfterNode(3, 9, 90);
+list.PrintList();
+Console.WriteLine("Add new item before some node: ");
+list.AddBeforeNode(3, 6, 60);
+list.AddBeforeNode(5, 7, 70);
+list.PrintList();
+Console.WriteLine("Delete first node: ");
+list.DeleteFirstNode();
+list.PrintList();
+Console.WriteLine("Delete last node: ");
+list.DeleteLastNode();
+list.PrintList();
+Console.WriteLine("Count of list: ");
+Console.WriteLine("Count: " + list.Count());
+Console.WriteLine("Delete node by key: ");
+list.DeleteNode(9);
+list.DeleteNode(6);
+list.DeleteNode(3);
+list.DeleteNode(7);
+list.DeleteNode(2);
+list.PrintList(); */
 
-// list.AddAfterNode(2, 20, 8, 80);
-// list.DeleteNode(4);
-// list.PrintList();
+/* Console.WriteLine("List with Persons:");
+Structures.LinkedList<int, string> listPersons = new(1, "Ivan");
+listPersons.AddLast(2, "Yura");
+listPersons.AddLast(2, "Zhenya");
+listPersons.AddLast(2, "Anton");
+listPersons.PrintList();
+listPersons.DeleteLastNode();
+listPersons.DeleteLastNode();
+listPersons.DeleteLastNode();
+listPersons.DeleteLastNode();
+Console.WriteLine("Count: " + listPersons.Count());
+Console.WriteLine("List of presons after clear: ");
+listPersons.Clear();
+listPersons.PrintList(); */
+
+//STACK
+/* Structures.Stack<int, int> stack = new(1, 10);
+stack.Push(2, 20);
+stack.Push(3, 30);
+stack.Push(4, 40);
+stack.PrintStack();
+Console.WriteLine("Pop stack: ");
+stack.Pop();
+stack.Pop();
+stack.PrintStack();
+stack.Pop();
+stack.Pop(); */
+
+//QUEUE
+Structures.Queue<int, int> queue = new();
+queue.AddItem(1, 10);
+queue.AddItem(2, 20);
+queue.AddItem(3, 30);
+queue.AddItem(4, 40);
+queue.PrintQueue();
+Console.WriteLine("Delete items: ");
+queue.DeleteItem();
+queue.DeleteItem();
+queue.PrintQueue();
+queue.AddItem(5, 50);
+Console.WriteLine("Add new item: ");
+queue.PrintQueue();
+queue.DeleteItem();
+Console.WriteLine("After deleting: ");
+queue.PrintQueue();
+Console.WriteLine("Queue is empty: " + queue.IsEmpty());
+Console.WriteLine("After clearing: ");
+queue.Clear();
+queue.PrintQueue();
