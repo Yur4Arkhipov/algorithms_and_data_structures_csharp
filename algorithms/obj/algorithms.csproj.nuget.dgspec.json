@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Projects\\university\\algorithms\\algorithms\\algorithms.csproj": {}
+    "D:\\Projects\\university\\algorithms\\algorithms\\algorithms.csproj": {}
   },
   "projects": {
-    "d:\\Projects\\university\\algorithms\\algorithms\\algorithms.csproj": {
+    "D:\\Projects\\university\\algorithms\\algorithms\\algorithms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Projects\\university\\algorithms\\algorithms\\algorithms.csproj",
+        "projectUniqueName": "D:\\Projects\\university\\algorithms\\algorithms\\algorithms.csproj",
         "projectName": "algorithms",
-        "projectPath": "d:\\Projects\\university\\algorithms\\algorithms\\algorithms.csproj",
+        "projectPath": "D:\\Projects\\university\\algorithms\\algorithms\\algorithms.csproj",
         "packagesPath": "C:\\Users\\yuraa\\.nuget\\packages\\",
-        "outputPath": "d:\\Projects\\university\\algorithms\\algorithms\\obj\\",
+        "outputPath": "D:\\Projects\\university\\algorithms\\algorithms\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yuraa\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -119,30 +119,39 @@ foreach (var item in arrToQuickSort) {
 
     (2)Stack
         Methods:
-            1.
-            2.
-            3.
-            4.
+            1.Count()
+            2.IsEmpty()
+            3.Push()
+            4.Pop()
+            5.Clear()
+            6.PrintStack()
 
     (3)Queue
         Methods:
-            1.
-            2.
-            3.
-            4.
+            1.AddItem()
+            2.DeleteItem()
+            3.IsEmpty()
+            4.Clear()
+            5.PrintQueue()
  */
 
-/* Structures.LinkedList<int, int> list = new(1, 10);
+/* Structures.LinkedList<int, int> list = new();
+list.AddFirst(0, 0);
+list.AddLast(1, 10);
 list.AddLast(2, 20);
 list.AddLast(3, 30);
 list.AddLast(4, 40);
 list.AddLast(5, 50);
 list.PrintList();
+//Get element by index
+Console.WriteLine("Element by index: " + list.GetNodeByIndex(2).ToString());
+// Console.WriteLine("Element by index: " + list.GetNodeByIndex(10).ToString());
+
 //Get Element by keys
-Console.WriteLine("Element by key: " + list.GetNode(3).ToString());
-Console.WriteLine("Element by key: " + list.GetNode(2).ToString());
-Console.WriteLine("Element by key: " + list.GetNode(5).ToString());
-Console.WriteLine("Element by key: " + list.GetNode(4).ToString());
+Console.WriteLine("Element by key: " + list.GetNodeByKey(1).ToString());
+Console.WriteLine("Element by key: " + list.GetNodeByKey(2).ToString());
+Console.WriteLine("Element by key: " + list.GetNodeByKey(5).ToString());
+Console.WriteLine("Element by key: " + list.GetNodeByKey(4).ToString());
 Console.WriteLine("Add new item after some mode: ");
 list.AddAfterNode(2, 8, 80);
 list.AddAfterNode(3, 9, 90);
@@ -168,10 +177,11 @@ list.DeleteNode(2);
 list.PrintList(); */
 
 /* Console.WriteLine("List with Persons:");
-Structures.LinkedList<int, string> listPersons = new(1, "Ivan");
-listPersons.AddLast(2, "Yura");
+Structures.LinkedList<int, string> listPersons = new();
+listPersons.AddLast(1, "Yura");
 listPersons.AddLast(2, "Zhenya");
-listPersons.AddLast(2, "Anton");
+listPersons.AddLast(3, "Anton");
+listPersons.AddLast(4, "ton");
 listPersons.PrintList();
 listPersons.DeleteLastNode();
 listPersons.DeleteLastNode();
@@ -183,7 +193,8 @@ listPersons.Clear();
 listPersons.PrintList(); */
 
 //STACK
-/* Structures.Stack<int, int> stack = new(1, 10);
+/* Structures.Stack<int, int> stack = new();
+stack.Push(1, 10);
 stack.Push(2, 20);
 stack.Push(3, 30);
 stack.Push(4, 40);
@@ -196,7 +207,7 @@ stack.Pop();
 stack.Pop(); */
 
 //QUEUE
-Structures.Queue<int, int> queue = new();
+/* Structures.Queue<int, int> queue = new();
 queue.AddItem(1, 10);
 queue.AddItem(2, 20);
 queue.AddItem(3, 30);
@@ -215,4 +226,24 @@ queue.PrintQueue();
 Console.WriteLine("Queue is empty: " + queue.IsEmpty());
 Console.WriteLine("After clearing: ");
 queue.Clear();
-queue.PrintQueue();
+queue.PrintQueue(); */
+
+//Set
+
+
+/* //Graph
+Graphs.Graph graph = new();
+// Создаем вершины
+Graphs.Vertex A = new Graphs.Vertex("A");
+Graphs.Vertex B = new Graphs.Vertex("B");
+Graphs.Vertex C = new Graphs.Vertex("C");
+// Добавляем вершины в граф
+graph.allVertexs.Add(A);
+graph.allVertexs.Add(B);
+graph.allVertexs.Add(C);
+// Добавляем ребра
+graph.AddEdge(A, B, 5); // Ребро от вершины A к вершине B с расстоянием 5
+graph.AddEdge(A, C, 3); // Ребро от вершины A к вершине C с расстоянием 3
+graph.AddEdge(B, C, 2); // Ребро от вершины B к вершине C с расстоянием 2
+
+graph.PrintAdjacencyList(graph); */
