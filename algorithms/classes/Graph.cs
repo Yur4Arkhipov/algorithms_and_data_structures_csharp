@@ -86,12 +86,29 @@ public class Graphs {
         public bool AddEdge(Vertex v1, Vertex v2, double dist) {
             if (!allVertexs.Contains(v1)) return false;
             if (!allVertexs.Contains(v2)) return false;
-            foreach (Edge cure in v1.GetEdges()) {
-                if (cure.EndPoint.GetID() == v2.GetID()) return false;
+            foreach (Edge item in v1.GetEdges()) {
+                if (item.EndPoint.GetID() == v2.GetID()) return false;
             }
             
             Edge ev1v2 = new Edge(v1, v2, dist);
             v1.GetEdges().Add(ev1v2); allEdges.Add(ev1v2);
+            return true;
+        }
+
+        public bool AddDualEdge(Vertex v1, Vertex v2, double dist) {
+            if(!allVertexs.Contains(v1)) return false;
+            if(!allVertexs.Contains(v2)) return false;
+            foreach (Edge item in v1.GetEdges()) {
+                if (item.EndPoint.GetID() == v2.GetID()) return false;
+            }
+            foreach (Edge item in v2.GetEdges()) {
+                if (item.EndPoint.GetID() == v1.GetID()) return false;
+            }
+            Edge ev1v2 = new Edge(v1, v2, dist);
+            Edge ev2v1 = new Edge(v2, v1, dist);
+            v1.GetEdges().Add(ev1v2); allEdges.Add(ev1v2);
+            v2.GetEdges().Add(ev2v1); allEdges.Add(ev2v1);
+            
             return true;
         }
 
@@ -108,16 +125,16 @@ public class Graphs {
 
 
         // Поиск в ширину
-       /*  public void BFS(Vertex s){
+        public void BFS(Vertex source){ //sourse - исходная вершина
             Queue<Vertex> Q = new Queue<Vertex>(); // Очередь вершин
             // Инициализация
             foreach(Vertex cv in allVertexs) {
                 cv.sumDistance = double.MaxValue;
                 cv.previousVertex = null;
             }
-            s.color = COLORS_VERTEX.GREY;       
-            s.sumDistance = 0;
-            Q.Enqueue (s);
+            source.color = COLORS_VERTEX.GREY;       
+            source.sumDistance = 0;
+            Q.Enqueue (source);
             Vertex u, v;
             Edge tr;
             List<Edge> edges_u;
@@ -128,6 +145,6 @@ public class Graphs {
 
             } 
 
-        } */
+        }
     }
 }

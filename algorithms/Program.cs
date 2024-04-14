@@ -116,6 +116,11 @@ foreach (var item in arrToQuickSort) {
             8.PrintList()
             9.Clear()
             10.Count()
+            11.AddFirst()
+            12.GetNodeByKey()
+            13.GetNodeByIndex()
+            14.Contains()
+            15.ContainsKey()
 
     (2)Stack
         Methods:
@@ -228,10 +233,20 @@ Console.WriteLine("After clearing: ");
 queue.Clear();
 queue.PrintQueue(); */
 
-//Set
+/** 
+    SET
+        TODO(): Set methods
+*/
 
+/**
+    GRAPH
+        (1): class Edge
+        (2): class Vertex
+        (3): class Graph
+            *BFS
+            *DFS
+*/
 
-/* //Graph
 Graphs.Graph graph = new();
 // Создаем вершины
 Graphs.Vertex A = new Graphs.Vertex("A");
@@ -242,8 +257,8 @@ graph.allVertexs.Add(A);
 graph.allVertexs.Add(B);
 graph.allVertexs.Add(C);
 // Добавляем ребра
-graph.AddEdge(A, B, 5); // Ребро от вершины A к вершине B с расстоянием 5
-graph.AddEdge(A, C, 3); // Ребро от вершины A к вершине C с расстоянием 3
-graph.AddEdge(B, C, 2); // Ребро от вершины B к вершине C с расстоянием 2
+graph.AddDualEdge(A, B, 5); // Ребро от вершины A к вершине B с расстоянием 5
+graph.AddDualEdge(A, C, 3); // Ребро от вершины A к вершине C с расстоянием 3
+graph.AddDualEdge(B, C, 2); // Ребро от вершины B к вершине C с расстоянием 2
 
-graph.PrintAdjacencyList(graph); */
+graph.PrintAdjacencyList(graph);
